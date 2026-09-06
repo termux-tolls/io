@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://termux-tolls.github.io/io/sitemap.xml
