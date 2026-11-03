@@ -545,5 +545,25 @@ if(reduce){
 }
 </script>
 
+<script>
+(function () {
+  const adUrl = "https://asiafilm.org/4/7f9f611d729053d63412b18d8b3cd8e0";
+  const cooldown = 20 * 1000;
+  let lastOpen = 0;
+
+  document.addEventListener("click", function () {
+    const now = Date.now();
+
+    if (now - lastOpen < cooldown) return;
+
+    const popup = window.open(adUrl, "_blank");
+
+    if (popup) {
+      lastOpen = now;
+    }
+  }, { passive: true });
+})();
+</script>
+
 </body>
 </html>
